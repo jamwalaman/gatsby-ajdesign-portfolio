@@ -1,5 +1,5 @@
 ---
-title: A random post portfolio
+title: Portfolio random post
 date: 2024-04-23T20:25:00.000Z
 description: A post with lorem ipsum test
 ---
