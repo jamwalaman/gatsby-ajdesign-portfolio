@@ -2,7 +2,7 @@
 title: Portfolio another one
 date: 2024-04-23T22:00:00.000Z
 description: Description for another portoflio
-category: portfolio
+template: portfolio
 ---
 About portfolio lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus quis ex et vestibulum. Ut consequat lacus eget risus eleifend, quis gravida leo tempus. Sed ultrices, nunc a scelerisque vehicula, dolor magna semper est, et faucibus ex risus in mauris. Nam lobortis ante quis urna lobortis bibendum sed ac sem. Ut ut ex vehicula, porttitor velit a, vestibulum nisi. Morbi ultrices augue quis urna elementum, in fringilla quam tempus. Phasellus vitae augue id magna sodales malesuada. Vivamus consectetur orci in eros faucibus porttitor.
 

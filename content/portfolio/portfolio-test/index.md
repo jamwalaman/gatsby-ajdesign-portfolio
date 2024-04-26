@@ -2,7 +2,7 @@
 title: Portfolio test
 date: 2024-04-26T11:45:00.000Z
 description: A description of portfolio test
-category: portfolio
+template: portfolio
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis pellentesque leo, vitae laoreet eros dignissim ac. Etiam egestas justo non vulputate rhoncus. Duis sed consequat risus, placerat eleifend leo. Fusce varius, est eu volutpat volutpat, risus dolor bibendum lacus, sit amet lacinia nisl risus in sapien. Nam erat nisl, varius at libero sit amet, aliquet dignissim turpis. Praesent non cursus sem. Suspendisse felis dui, tempus non dapibus lacinia, sagittis id nisl.
 

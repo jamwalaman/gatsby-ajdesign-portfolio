@@ -34,7 +34,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Category', name: 'category', widget: 'select', options: [{label: 'Blog', value: 'blog'}, {label: 'Portfolio', value: 'portfolio'}] }
+      - { label: 'Template', name: 'template', widget: 'select', options: [{label: 'Blog', value: 'blog'}, {label: 'Portfolio', value: 'portfolio'}], defualt: 'portfolio', hint: 'Select a page template' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - label: 'Pages'
     name: 'pages'
