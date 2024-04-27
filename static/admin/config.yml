@@ -41,7 +41,7 @@ collections:
     files:
       - label: 'About page'
         name: 'about'
-        file: 'content/website-pages/about'
+        file: 'content/website-pages/about/index.md'
         fields:
           - { label: Title, name: title, widget: string }
           - { label: 'Body', name: 'body', widget: 'markdown' }
