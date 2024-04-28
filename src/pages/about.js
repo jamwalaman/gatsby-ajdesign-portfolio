@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -11,8 +11,6 @@ const AboutPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Bio />
-      <Link to='/'>Home</Link>
       <p>{page.frontmatter.title}</p>
       <section
           dangerouslySetInnerHTML={{ __html: page.html }}
