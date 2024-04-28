@@ -24,6 +24,14 @@ module.exports = {
     `gatsby-plugin-decap-cms`,
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        sassOptions: {
+          includePaths: ['src/styles']
+        }
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
