@@ -10,7 +10,9 @@ const HomePage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <p>{page.frontmatter.title}</p>
+      <section
+          dangerouslySetInnerHTML={{ __html: page.frontmatter.welcome }}
+        />
       <section
           dangerouslySetInnerHTML={{ __html: page.html }}
         />
@@ -38,6 +40,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        welcome
       }
     }
   }

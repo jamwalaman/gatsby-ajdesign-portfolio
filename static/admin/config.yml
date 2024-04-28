@@ -54,4 +54,5 @@ collections:
           preview: false
         fields:
           - { label: Title, name: title, widget: string }
+          - { label: 'Welcome text', name: 'welcome', widget: 'markdown' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
