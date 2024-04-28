@@ -9,12 +9,12 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Aman Jamwal Design`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Aman Jamwal`,
+      summary: `Designer and web developer living in Cristchurch.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A portfolio website showcasing my work.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `kylemathews`,

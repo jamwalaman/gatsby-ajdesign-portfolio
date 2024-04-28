@@ -42,6 +42,16 @@ collections:
       - label: 'About page'
         name: 'about'
         file: 'content/website-pages/about/index.md'
+        editor:
+          preview: false
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Home page'
+        name: 'home'
+        file: 'content/website-pages/home/index.md'
+        editor:
+          preview: false
         fields:
           - { label: Title, name: title, widget: string }
           - { label: 'Body', name: 'body', widget: 'markdown' }
