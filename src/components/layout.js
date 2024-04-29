@@ -1,5 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -24,8 +27,18 @@ const Layout = ({ location, title, children }) => {
     <div>
       <header className="global-header">{header}</header>
       <main>
-        <Link to='/portfolio'>Portfolio</Link>
-        <Link to='/about'>About</Link>
+        <Navbar expand="lg">
+          <Container>
+            <Link to='/' className='navbar-brand'>Aj desgin</Link>
+            <Navbar.Toggle aria-controls='basic-navbar-nav' />
+            <Navbar.Collapse id='basic-navbar-nav'>
+              <Nav className="me-auto">
+                <Link to='/portfolio' className='nav-link'>Portfolio</Link>
+                <Link to='/about' className='nav-link'>About</Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
         {children}
       </main>
       <footer>
