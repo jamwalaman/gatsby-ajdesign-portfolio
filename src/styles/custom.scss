@@ -2,22 +2,35 @@
 
 :root {
     --ajd-blue: #0069b4;
+    --ajd-lightblue: #b3d9ff;
 }
 
 body {
     font-family: 'Inter', Arial, sans-serif;
 }
 
-a {
-    color: var(--ajd-blue)
+a, .nav-link {
+    color: var(--ajd-blue);
+    transition: 0.2s;
 }
 
 .ajd-nav-header {
     background-color: var(--ajd-blue);
 }
-svg {
+.ajd-nav-header svg {
     width: 160px;
     height: auto;
+}
+.ajd-nav-header .nav-link {
+    color: #fff;
+}
+.ajd-nav-header .nav-link:hover {
+    color: var(--ajd-lightblue);
+}
+
+.welcome {
+    white-space: pre-wrap;
+    text-align: center;
 }
 
 @media (min-width: 992px) {

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row';
+import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <main>
-        <Navbar expand='lg' className='ajd-nav-header'>
+        <Navbar expand='lg' className='ajd-nav-header mb-5'>
           <Container>
             <Link to='/' className='navbar-brand'>
               <SvgComponent />              

@@ -10,7 +10,7 @@ const HomePage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <section
+      <div className='welcome'
           dangerouslySetInnerHTML={{ __html: page.frontmatter.welcome }}
         />
       <section
