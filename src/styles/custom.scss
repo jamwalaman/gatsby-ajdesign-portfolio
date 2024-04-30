@@ -1,8 +1,27 @@
 @import "~bootstrap/scss/bootstrap";
 
+:root {
+    --ajd-blue: #0069b4;
+}
+
 body {
     font-family: 'Inter', Arial, sans-serif;
 }
+
 a {
-    color: #0069b4;
+    color: var(--ajd-blue)
+}
+
+.ajd-nav-header {
+    background-color: var(--ajd-blue);
+}
+svg {
+    width: 160px;
+    height: auto;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end;
+    }
 }
