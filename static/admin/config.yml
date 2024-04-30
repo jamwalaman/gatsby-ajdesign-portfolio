@@ -39,14 +39,6 @@ collections:
   - label: 'Pages'
     name: 'pages'
     files:
-      - label: 'About page'
-        name: 'about'
-        file: 'content/website-pages/about/index.md'
-        editor:
-          preview: false
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Home page'
         name: 'home'
         file: 'content/website-pages/home/index.md'
@@ -55,4 +47,20 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: 'Welcome text', name: 'welcome', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'About page'
+        name: 'about'
+        file: 'content/website-pages/about/index.md'
+        editor:
+          preview: false
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Contact page'
+        name: 'contact'
+        file: 'content/website-pages/contact/index.md'
+        editor:
+          preview: false
+        fields:
+          - { label: Title, name: title, widget: string }
           - { label: 'Body', name: 'body', widget: 'markdown' }

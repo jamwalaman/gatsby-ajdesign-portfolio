@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
               <Nav>
                 <Link to='/portfolio' className='nav-link'>portfolio</Link>
                 <Link to='/about' className='nav-link'>about</Link>
+                <Link to='/contact' className='nav-link'>contact</Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
