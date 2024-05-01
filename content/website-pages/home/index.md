@@ -1,8 +1,7 @@
 ---
 title: Home page
 welcome: |-
-  Kia ora
-
+  Kia ora\
   I’m Aman — a designer and web developer based in Ōtautahi Christchurch
 ctabtns:
   - displaytext: my work
