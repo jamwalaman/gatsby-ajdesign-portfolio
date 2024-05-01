@@ -47,6 +47,12 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: 'Welcome text', name: 'welcome', widget: 'markdown' }
+          - label: 'CTA Buttons'
+            name: 'ctabtns'
+            widget: 'list'
+            fields:
+              - { label: Display text, name: displaytext, widget: string }
+              - { label: Link, name: link, widget: string }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'About page'
         name: 'about'

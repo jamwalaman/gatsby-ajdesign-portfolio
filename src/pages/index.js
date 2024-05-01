@@ -7,15 +7,16 @@ import Seo from "../components/seo"
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const page = data.homePage
+  const ctabtns = page.frontmatter.ctabtns
 
   return (
     <Layout location={location} title={siteTitle}>
-      <div className='welcome'
-          dangerouslySetInnerHTML={{ __html: page.frontmatter.welcome }}
-        />
-      <section
-          dangerouslySetInnerHTML={{ __html: page.html }}
-        />
+      <div className='welcome' dangerouslySetInnerHTML={{ __html: page.frontmatter.welcome }} />
+      {ctabtns.map(btn => {
+        return (
+          <p>{btn.displaytext}</p>
+        )
+      })}
     </Layout>
   )
 }
@@ -41,6 +42,10 @@ export const pageQuery = graphql`
       frontmatter {
         title
         welcome
+        ctabtns {
+          displaytext
+          link
+        }
       }
     }
   }
