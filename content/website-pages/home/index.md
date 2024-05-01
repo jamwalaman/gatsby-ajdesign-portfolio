@@ -1,5 +1,5 @@
 ---
-title: Home page title
+title: Home page
 welcome: |-
   Kia ora
 
