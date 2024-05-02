@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -11,12 +11,16 @@ const HomePage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <div className='welcome' dangerouslySetInnerHTML={{ __html: page.frontmatter.welcome }} />
-      {ctabtns.map(btn => {
-        return (
-          <p>{btn.displaytext}</p>
-        )
-      })}
+      <div className='welcome'>
+        <h1 dangerouslySetInnerHTML={{ __html: page.frontmatter.welcome }} />
+        <div className='ctabtns'>
+          {ctabtns.map(btn => {
+            return (
+              <Link to={btn.link} key={btn.link}>{btn.displaytext}</Link>
+            )
+          })}
+        </div>
+      </div>
     </Layout>
   )
 }

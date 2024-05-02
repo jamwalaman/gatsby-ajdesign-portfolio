@@ -30,7 +30,24 @@ a, .nav-link {
 
 .welcome {
     white-space: pre-wrap;
+    background-color: var(--ajd-blue);
+    color: #fff;
+    margin: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.welcome a {
+    color: #fff;
+}
+.welcome h1 {
     text-align: center;
+}
+.ctabtns {
+    display: flex;
 }
 
 @media (min-width: 992px) {

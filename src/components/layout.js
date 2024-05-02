@@ -8,37 +8,39 @@ import Navbar from 'react-bootstrap/Navbar'
 import SvgComponent from "./ajd-logo"
 
 const Layout = ({ children }) => {
+
   return (
     <div>
-      <main>
-        <Navbar expand='lg' className='ajd-nav-header mb-5'>
-          <Container>
-            <Link to='/' className='navbar-brand'>
-              <SvgComponent />              
-            </Link>
-            <Navbar.Toggle aria-controls='basic-navbar-nav' />
-            <Navbar.Collapse id='basic-navbar-nav'>
-              <Nav>
-                <Link to='/portfolio' className='nav-link'>portfolio</Link>
-                <Link to='/about' className='nav-link'>about</Link>
-                <Link to='/contact' className='nav-link'>contact</Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
+      <Navbar expand='lg' className='ajd-nav-header'>
         <Container>
-          <Row className='justify-content-md-center'>
-            <Col md={9}>{children}</Col>
-          </Row>
+          <Link to='/' className='navbar-brand'>
+            <SvgComponent />              
+          </Link>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            <Nav>
+              <Link to='/portfolio' className='nav-link'>portfolio</Link>
+              <Link to='/about' className='nav-link'>about</Link>
+              <Link to='/contact' className='nav-link'>contact</Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
-      </main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+      </Navbar>
+      <Container>
+        <Row className='justify-content-md-center'>
+        <Col md={9}>{children}</Col>
+        </Row>
+      </Container>
+      <Container>
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </footer>
+      </Container>
     </div>
   )
+  
 }
 
 export default Layout
