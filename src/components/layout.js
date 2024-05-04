@@ -1,10 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+import {Navbar, Nav, Container} from 'react-bootstrap'
 import SvgComponent from "./ajd-logo"
 
 const Layout = ({ children }) => {
@@ -26,11 +22,7 @@ const Layout = ({ children }) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container>
-        <Row className='justify-content-md-center'>
-        <Col md={9}>{children}</Col>
-        </Row>
-      </Container>
+      {children}
       <Container>
         <footer>
           © {new Date().getFullYear()}, Built with
