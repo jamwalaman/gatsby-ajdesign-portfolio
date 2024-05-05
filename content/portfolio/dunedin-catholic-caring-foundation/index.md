@@ -5,7 +5,7 @@ description: Supporting those living in the Otago and Southland region in
   multiple ways that build up our community and enable everyone to flourish
 featuredimg: web-cath.jpg
 template: portfolio
-feautred: true
+featured: true
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius mi dui, vitae tincidunt tortor cursus et. Aliquam lacinia nisi id dolor hendrerit, vel sagittis lectus interdum. Mauris feugiat vel lorem at facilisis. Praesent scelerisque purus ipsum, in mollis ex pulvinar a. Sed eros lacus, aliquet et velit at, convallis scelerisque mi. In vel diam sit amet mauris interdum malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam enim magna, pellentesque quis sem a, ornare vehicula odio. Etiam mattis consectetur iaculis. Mauris placerat mi vel consectetur lacinia. Pellentesque accumsan laoreet ex, at tempor sapien pharetra vel. Sed ornare massa non sollicitudin accumsan. Sed ipsum massa, rhoncus sed enim vitae, finibus maximus tortor. Vivamus dignissim vulputate sagittis.
 
