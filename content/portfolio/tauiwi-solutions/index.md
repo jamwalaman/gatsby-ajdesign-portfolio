@@ -6,7 +6,7 @@ description: Tauiwi Solutions was formed in 2006 as a facilitation and workshop
   (Dunedin)
 featuredimg: web-tauiwi.png
 template: portfolio
-feautred: false
+featured: false
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a neque egestas, fermentum augue a, molestie lorem. Nam vitae nibh consectetur, semper enim quis, dapibus nulla. Nullam rhoncus erat at massa volutpat convallis. Duis molestie, nulla vel consectetur tempor, nunc purus egestas elit, sed condimentum enim quam imperdiet ex. Morbi vel felis fermentum, hendrerit lorem at, dapibus quam. Mauris ac molestie lorem. Praesent a venenatis felis.
 
