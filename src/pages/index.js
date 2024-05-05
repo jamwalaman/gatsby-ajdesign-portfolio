@@ -3,11 +3,12 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Image } from "react-bootstrap"
 
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const page = data.homePage
+  const featuredWork = data.allMarkdownRemark.nodes
   const ctabtns = page.frontmatter.ctabtns
 
   return (
@@ -29,6 +30,19 @@ const HomePage = ({ data, location }) => {
           </Row>
         </Container>
       </div>
+      
+      <Container className='work'>
+        <Row>
+          {featuredWork.map(work => {
+            return (
+              <Col md={6} key={work.fields.slug}>
+                <h2>{work.frontmatter.title}</h2>
+                <Image src={work.frontmatter.featuredimg.publicURL} />
+              </Col>
+            )
+          })}
+        </Row>
+      </Container>
 
     </Layout>
   )
@@ -48,6 +62,23 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: {featured: {eq: true}} }
+    ) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          featuredimg {
+            publicURL
+          }
+        }
       }
     }
     homePage: markdownRemark(fields: { slug: { eq: "/home/" } }) {

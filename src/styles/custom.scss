@@ -63,6 +63,15 @@ a, .nav-link {
     background-color: #fff;
     color: #000;
 }
+.ctabtns a:first-child:hover, .ctabtns a:last-child:hover, .work img {
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.4);
+}
+
+.work img {
+    width: 100%;
+}
 
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-collapse {
