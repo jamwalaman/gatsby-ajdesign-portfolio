@@ -1,13 +1,14 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import {Navbar, Nav, Container} from 'react-bootstrap'
+import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap'
 import SvgComponent from "./ajd-logo"
 
-const Layout = ({ children }) => {
+const Layout = ({ location, children }) => {
+  const rootPath = `${__PATH_PREFIX__}/`
 
   return (
     <div>
-      <Navbar expand='lg' className='ajd-nav-header'>
+      <Navbar expand='lg' className='ajd-nav-header navbar-dark'>
         <Container>
           <Link to='/' className='navbar-brand'>
             <SvgComponent />              
@@ -22,7 +23,15 @@ const Layout = ({ children }) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {children}
+      {location.pathname === rootPath ? (
+        children
+      ) : (
+        <Container>
+          <Row className='justify-content-md-center'>
+          <Col md={9}>{children}</Col>
+          </Row>
+        </Container>
+      )}
       <Container>
         <footer>
           © {new Date().getFullYear()}, Built with

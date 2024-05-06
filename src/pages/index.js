@@ -30,11 +30,11 @@ const HomePage = ({ data, location }) => {
           </Row>
         </Container>
       </div>
-      <Container className='work my-5'>
+      <Container className='work'>
         <Row>
           {featuredWork.map(work => {
             return (
-              <Col md={6} key={work.fields.slug}>
+              <Col md={6} key={work.fields.slug} className='py-5'>
                 <Image src={work.frontmatter.featuredimg.publicURL} />
                 <h2 className='my-4'>{work.frontmatter.title}</h2>
                 <p>{work.frontmatter.description}</p>

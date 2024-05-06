@@ -18,6 +18,8 @@ a.button {
     text-decoration: none;
     border: 5px solid var(--ajd-blue);
     color: #000;
+    display: inline-block;
+    margin-top: 1.5rem;
 }
 a.button:hover {
     background-color: var(--ajd-blue);
@@ -30,6 +32,12 @@ a.button:hover {
 .ajd-nav-header svg {
     width: 160px;
     height: auto;
+}
+.ajd-nav-header .navbar-toggler {
+    border: none;
+}
+.ajd-nav-header .navbar-toggler:focus {
+    box-shadow: none;
 }
 .ajd-nav-header .nav-link {
     color: #fff;
@@ -72,10 +80,10 @@ a.button:hover {
     background-color: #fff;
     color: #000;
 }
-.ctabtns a:first-child:hover, .ctabtns a:last-child:hover, .work img {
-    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.4);
+.ctabtns a:first-child:hover, .ctabtns a:last-child:hover, a.button:hover, .work img {
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
 }
 
 .work img {
