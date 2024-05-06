@@ -1,7 +1,7 @@
 ---
 title: South Dunedin Community Network
 date: 2024-05-06T12:25:00.000Z
-description: Connects people across the wider South Dunedin area to strengthen
+description: Connecting people across the wider South Dunedin area to strengthen
   communities and help people use their voice to create a vibrant, resilient
   community and a safe future together
 featuredimg: web-sdcn03.jpg
