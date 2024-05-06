@@ -7,9 +7,9 @@ import { Container, Row, Col, Image } from "react-bootstrap"
 
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const page = data.homePage
+  const homePage = data.homePage
   const featuredWork = data.allMarkdownRemark.nodes
-  const ctabtns = page.frontmatter.ctabtns
+  const ctabtns = homePage.frontmatter.ctabtns
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -18,7 +18,7 @@ const HomePage = ({ data, location }) => {
         <Container className='welcome'>
           <Row className='justify-content-md-center'>
             <Col md={9}>
-              <h1 dangerouslySetInnerHTML={{ __html: page.frontmatter.welcome }} />
+              <h1 dangerouslySetInnerHTML={{ __html: homePage.frontmatter.welcome }} />
               <div className='ctabtns mt-5'>
                 {ctabtns.map(btn => {
                   return (
@@ -30,14 +30,15 @@ const HomePage = ({ data, location }) => {
           </Row>
         </Container>
       </div>
-      
-      <Container className='work'>
+      <Container className='work my-5'>
         <Row>
           {featuredWork.map(work => {
             return (
               <Col md={6} key={work.fields.slug}>
-                <h2>{work.frontmatter.title}</h2>
                 <Image src={work.frontmatter.featuredimg.publicURL} />
+                <h2 className='my-4'>{work.frontmatter.title}</h2>
+                <p>{work.frontmatter.description}</p>
+                <Link className='px-4 py-2 button' to={work.fields.slug}>View project</Link>
               </Col>
             )
           })}
@@ -75,6 +76,7 @@ export const pageQuery = graphql`
         }
         frontmatter {
           title
+          description
           featuredimg {
             publicURL
           }

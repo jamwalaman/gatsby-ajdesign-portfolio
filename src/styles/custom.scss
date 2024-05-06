@@ -14,6 +14,16 @@ a, .nav-link {
     transition: 0.2s;
 }
 
+a.button {
+    text-decoration: none;
+    border: 5px solid var(--ajd-blue);
+    color: #000;
+}
+a.button:hover {
+    background-color: var(--ajd-blue);
+    color: #fff;
+}
+
 .ajd-nav-header {
     background-color: var(--ajd-blue);
 }
@@ -47,7 +57,6 @@ a, .nav-link {
     justify-content: center;
 }
 .ctabtns a {
-    border-radius: 20px;
     border: 5px solid #fff;
 }
 .ctabtns a:first-child {
