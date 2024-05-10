@@ -33,11 +33,11 @@ const ContactForm = () => {
                             <Row className='mb-3'>
                             <Form.Group as={Col} controlId='formGridName'>
                                 <Form.Label>Name</Form.Label>
-                                <Form.Control placeholder='Enter your name' required />
+                                <Form.Control placeholder='Enter your name' name='name' required />
                             </Form.Group>
                             <Form.Group as={Col} controlId='formGridEmail'>
                                 <Form.Label>Email</Form.Label>
-                                <Form.Control type='email' placeholder='Enter email' required />
+                                <Form.Control type='email' placeholder='Enter email' name='email' required />
                             </Form.Group>
                             </Row>
                             <Button type='submit'>Let's do this</Button>
