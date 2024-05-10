@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ContactForm from "../components/contact-form"
 import { Container, Row, Col, Image } from "react-bootstrap"
 
 const HomePage = ({ data, location }) => {
@@ -44,6 +45,8 @@ const HomePage = ({ data, location }) => {
           })}
         </Row>
       </Container>
+
+      <ContactForm />
 
     </Layout>
   )
