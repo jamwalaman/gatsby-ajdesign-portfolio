@@ -8,6 +8,7 @@
 :root {
     --ajd-blue: #0069b4;
     --ajd-lightblue: #b3d9ff;
+    --invalid-red: #CC5500;
 }
 
 body {
@@ -98,7 +99,7 @@ a.button:hover {
     background-color: #f2f2f2;
 }
 .form-label span {
-    color: #CC5500;
+    color: var(--invalid-red);
 }
 .form-control {
     border-radius: 0;
@@ -108,8 +109,17 @@ textarea.form-control {
     height: auto;
 }
 .form-control:focus {
-    box-shadow: none;
     border-color: var(--ajd-blue);
+}
+.invalid-feedback {
+    color: var(--invalid-red);
+}
+.form-control.is-invalid {
+    background-image: none;
+    border-color: var(--invalid-red);
+}
+.form-control:focus, .form-control.is-invalid:focus {
+    box-shadow: none;
 }
 .btn-primary {
     border-radius: 0;
