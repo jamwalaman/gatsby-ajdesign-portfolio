@@ -1,5 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 
+::selection {
+    color: #fff;
+    background-color: #000;
+}
+
 :root {
     --ajd-blue: #0069b4;
     --ajd-lightblue: #b3d9ff;
@@ -80,7 +85,7 @@ a.button:hover {
     background-color: #fff;
     color: #000;
 }
-.ctabtns a:first-child:hover, .ctabtns a:last-child:hover, a.button:hover, .work img {
+.ctabtns a:first-child:hover, .ctabtns a:last-child:hover, a.button:hover, .work img, .btn-primary {
     box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
@@ -88,6 +93,27 @@ a.button:hover {
 
 .work img {
     width: 100%;
+}
+.form-wrapper {
+    background-color: #f2f2f2;
+}
+.form-label span {
+    color: #CC5500;
+}
+.form-control {
+    border-radius: 0;
+    height: calc(2em + 0.75rem + 2px);
+}
+textarea.form-control {
+    height: auto;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--ajd-blue);
+}
+.btn-primary {
+    border-radius: 0;
+    background-color: var(--ajd-blue);
 }
 
 @media (min-width: 992px) {

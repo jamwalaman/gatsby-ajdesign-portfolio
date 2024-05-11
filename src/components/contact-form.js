@@ -24,32 +24,50 @@ const ContactForm = () => {
 
   return (
     <>
-      {!isSubmitted ? (
+      <div className='form-wrapper py-5'>
         <Container>
-          <Row>
-            <Col md={6}>
-              <Form name='contact' method='POST' data-netlify='true' data-netlify-honeypot='bot-field' onSubmit={handleSubmit}>
-                <input type='hidden' name='form-name' value='contact' />
-                <Row className='mb-3'>
-                  <Form.Group as={Col} controlId='formGridName'>
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control placeholder='Enter your name' name='name' required />
-                  </Form.Group>
-                  <Form.Group as={Col} controlId='formGridEmail'>
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type='email' placeholder='Enter email' name='email' required />
-                  </Form.Group>
-                </Row>
-                <Button type='submit'>Let's do this</Button>
-              </Form>
+          <Row className='justify-content-md-center'>
+            <Col md={9}>
+              {!isSubmitted ? (
+                <Form name='contact' method='POST' data-netlify='true' data-netlify-honeypot='bot-field' onSubmit={handleSubmit}>
+                  <input type='hidden' name='form-name' value='contact' />
+                  <Row className='mb-3'>
+                    <Form.Group as={Col} md='6' controlId='formGridFirstName'>
+                      <Form.Label>First Name <span>*</span></Form.Label>
+                      <Form.Control name='firstname' required />
+                    </Form.Group>
+                    <Form.Group as={Col} md='6' controlId='formGridLastName'>
+                      <Form.Label>Last Name <span>*</span></Form.Label>
+                      <Form.Control name='lastname' required />
+                    </Form.Group>
+                  </Row>
+                  <Row className='mb-3'>
+                    <Form.Group as={Col} md='6' controlId='formGridEmail'>
+                      <Form.Label>Email <span>*</span></Form.Label>
+                      <Form.Control type='email' name='email' required />
+                    </Form.Group>
+                    <Form.Group as={Col} md='6' controlId='formGridContactNumber'>
+                      <Form.Label>Contact number</Form.Label>
+                      <Form.Control name='contactnumber' />
+                    </Form.Group>
+                  </Row>
+                  <Row className='mb-3'>
+                    <Form.Group controlId='formGridmessage'>
+                      <Form.Label>Message <span>*</span></Form.Label>
+                      <Form.Control as="textarea" rows={4} />
+                    </Form.Group>
+                  </Row>
+                  <Button type='submit'>Send message</Button>
+                </Form>
+              ) : (
+                <div>
+                  <p>Thank you. I will get back to you as soon as possible.</p>
+                </div>
+              )}
             </Col>
           </Row>
         </Container>
-      ) : (
-        <div>
-          <p>Thank you. I will get back to you as soon as possible.</p>
-        </div>
-      )}
+      </div>
     </>
   );
 };
