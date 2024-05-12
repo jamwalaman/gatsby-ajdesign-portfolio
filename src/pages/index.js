@@ -4,22 +4,22 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ContactForm from "../components/contact-form"
-import { Container, Row, Col, Image } from "react-bootstrap"
+import WorkList from "../components/work-list"
+import { Container, Row, Col } from "react-bootstrap"
 
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const homePage = data.homePage
-  const featuredWork = data.allMarkdownRemark.nodes
   const ctabtns = homePage.frontmatter.ctabtns
 
   return (
     <Layout location={location} title={siteTitle}>
 
-      <div className='welcome pt-2 pb-5'>
-        <Container className='welcome'>
+      <div className='blue-bg pt-2 pb-5'>
+        <Container>
           <Row className='justify-content-md-center'>
             <Col md={9}>
-              <h1 dangerouslySetInnerHTML={{ __html: homePage.frontmatter.welcome }} />
+              <h1 className='text-center' dangerouslySetInnerHTML={{ __html: homePage.frontmatter.welcome }} />
               <div className='ctabtns mt-5'>
                 {ctabtns.map(btn => {
                   return (
@@ -31,20 +31,8 @@ const HomePage = ({ data, location }) => {
           </Row>
         </Container>
       </div>
-      <Container className='work'>
-        <Row>
-          {featuredWork.map(work => {
-            return (
-              <Col md={6} key={work.fields.slug} className='py-5'>
-                <Image src={work.frontmatter.featuredimg.publicURL} />
-                <h2 className='my-4'>{work.frontmatter.title}</h2>
-                <p>{work.frontmatter.description}</p>
-                <Link className='px-4 py-2 button' to={work.fields.slug}>View project</Link>
-              </Col>
-            )
-          })}
-        </Row>
-      </Container>
+      
+      <WorkList />
 
       <ContactForm />
 
@@ -66,24 +54,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(
-      sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: {featured: {eq: true}} }
-    ) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          description
-          featuredimg {
-            publicURL
-          }
-        }
       }
     }
     homePage: markdownRemark(fields: { slug: { eq: "/home/" } }) {

@@ -35,7 +35,7 @@ a.button:hover {
 .ajd-nav-header {
     background-color: var(--ajd-blue);
 }
-.ajd-nav-header svg {
+.logo svg {
     width: 160px;
     height: auto;
 }
@@ -45,25 +45,22 @@ a.button:hover {
 .ajd-nav-header .navbar-toggler:focus {
     box-shadow: none;
 }
-.ajd-nav-header .nav-link {
+.ajd-nav-header .nav-link, footer .nav-link {
     color: #fff;
     font-weight: 700;
 }
-.ajd-nav-header .nav-link:hover {
+.ajd-nav-header .nav-link:hover, footer .nav-link:hover {
     color: var(--ajd-lightblue);
 }
 
-.welcome {
+.blue-bg {
     white-space: pre-wrap;
     background-color: var(--ajd-blue);
     color: #fff;
 }
-.welcome a {
+.blue-bg a {
     color: #fff;
     text-decoration: none;
-}
-.welcome h1 {
-    text-align: center;
 }
 
 .ctabtns {
@@ -95,6 +92,7 @@ a.button:hover {
 .work img {
     width: 100%;
 }
+
 .form-wrapper {
     background-color: #f2f2f2;
 }
@@ -121,9 +119,13 @@ textarea.form-control {
 .form-control:focus, .form-control.is-invalid:focus {
     box-shadow: none;
 }
+
 .btn-primary {
     border-radius: 0;
     background-color: var(--ajd-blue);
+}
+.btn-primary:hover {
+    background-color: #0077cc;
 }
 
 @media (min-width: 992px) {
