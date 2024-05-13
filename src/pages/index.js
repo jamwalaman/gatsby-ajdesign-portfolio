@@ -16,7 +16,7 @@ const HomePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
 
       <div className='blue-bg pt-2 pb-5'>
-        <Container>
+        <Container className='content'>
           <Row className='justify-content-md-center'>
             <Col md={9}>
               <h1 className='text-center' dangerouslySetInnerHTML={{ __html: homePage.frontmatter.welcome }} />
@@ -34,7 +34,7 @@ const HomePage = ({ data, location }) => {
       
       <WorkList />
 
-      <ContactForm />
+      <ContactForm formWrapper='form-wrapper py-5'/>
 
     </Layout>
   )

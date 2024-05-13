@@ -9,7 +9,7 @@ const Layout = ({ location, children }) => {
 
   return (
     <div>
-      <Navbar expand='lg' className='ajd-nav-header navbar-dark'>
+      <Navbar expand='lg' fixed='top' className='ajd-nav-header navbar-dark'>
         <Container>
           <Link to='/' className='navbar-brand' title='Home'><SvgComponent /></Link>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -25,20 +25,20 @@ const Layout = ({ location, children }) => {
       {location.pathname === rootPath ? (
         children
       ) : (
-        <Container>
+        <Container className='content'>
           <Row className='justify-content-md-center'>
             <Col md={10}>{children}</Col>
           </Row>
         </Container>
       )}
 
-      <footer className='blue-bg p-5' >
+      <footer className='blue-bg p-4' >
         <Container>
           <Row>
             <Col md={6}>
               <Link to='/' className='navbar-brand' title='Home'><SvgComponent /></Link>
               <p className='mt-4'>© {new Date().getFullYear()} | Aman Jamwal Design</p>
-              <a href='https://github.com/jamwalaman' target='_blank' rel='noreferrer' title='My GitHub account'><i className='bi bi-github'></i></a>
+              <a href='https://github.com/jamwalaman' target='_blank' rel='noreferrer' aria-label='GitHub account' title='My GitHub account'><i className='bi bi-github'></i></a>
             </Col>
             <Col md={6}>
               <Link to='/portfolio' className='nav-link'>portfolio</Link>

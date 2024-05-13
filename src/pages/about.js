@@ -10,7 +10,7 @@ const AboutPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <p>{page.frontmatter.title}</p>
+      <h1 className='text-center'>{page.frontmatter.title}</h1>
       <section
           dangerouslySetInnerHTML={{ __html: page.html }}
         />

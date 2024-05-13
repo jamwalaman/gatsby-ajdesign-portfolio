@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Button, Form } from 'react-bootstrap'
 
-const ContactForm = () => {
+const ContactForm = ({ formWrapper = '' }) => {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [errors, setErrors] = useState({})
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -42,7 +42,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className='form-wrapper py-5'>
+      <div className={formWrapper}>
         <Container>
           <Row className='justify-content-md-center'>
             <Col md={9}>
