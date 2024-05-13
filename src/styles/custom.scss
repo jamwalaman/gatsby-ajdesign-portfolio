@@ -128,6 +128,13 @@ textarea.form-control {
     background-color: #0077cc;
 }
 
+footer .logo {
+    display: inline-block;
+}
+footer .bi-github {
+    font-size: 2rem;
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-collapse {
         justify-content: flex-end;

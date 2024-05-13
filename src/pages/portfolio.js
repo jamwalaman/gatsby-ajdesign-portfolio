@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { Container, Row, Col, Image } from "react-bootstrap"
+import { Row, Col, Image } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -10,20 +10,18 @@ const PortfolioHome = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Container className='work'>
-        <Row>
-          {data.allMarkdownRemark.nodes.map(work => {
-            return (
-              <Col md={6} key={work.fields.slug} className='py-5'>
-                <Image src={work.frontmatter.featuredimg.publicURL} />
-                <h2 className='my-4'>{work.frontmatter.title}</h2>
-                <p>{work.frontmatter.description}</p>
-                <Link className='px-4 py-2 button' to={work.fields.slug}>View project</Link>
-              </Col>
-            )
-          })}
-        </Row>
-      </Container>
+      <Row className='work'>
+        {data.allMarkdownRemark.nodes.map(work => {
+          return (
+            <Col md={6} key={work.fields.slug} className='py-5'>
+              <Image src={work.frontmatter.featuredimg.publicURL} />
+              <h2 className='my-4'>{work.frontmatter.title}</h2>
+              <p>{work.frontmatter.description}</p>
+              <Link className='px-4 py-2 button' to={work.fields.slug}>View project</Link>
+            </Col>
+          )
+        })}
+      </Row>
     </Layout>
   )
 
