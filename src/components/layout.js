@@ -26,7 +26,7 @@ const Layout = ({ location, children }) => {
       ) : (
         <Container>
           <Row className='justify-content-md-center'>
-            <Col md={9}>{children}</Col>
+            <Col md={10}>{children}</Col>
           </Row>
         </Container>
       )}

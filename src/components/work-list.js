@@ -5,7 +5,7 @@ import { Container, Row, Col, Image } from "react-bootstrap"
 const WorkList = () => {
 
     const data = useStaticQuery(graphql`
-    query WorkQuery {
+    query {
         allMarkdownRemark(
             sort: { frontmatter: { date: DESC } }
             filter: { frontmatter: {featured: {eq: true}} }
