@@ -12,7 +12,7 @@ const ContactPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <h1 className='text-center'>{page.frontmatter.title}</h1>
-      <section dangerouslySetInnerHTML={{ __html: page.html }} />
+      <section className='text-center' dangerouslySetInnerHTML={{ __html: page.html }} />
       <ContactForm formWrapper='py-4' />
     </Layout>
   )
@@ -25,7 +25,7 @@ export default ContactPage
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Contact me" />
+export const Head = () => <Seo title='Contact' />
 
 export const pageQuery = graphql`
   {

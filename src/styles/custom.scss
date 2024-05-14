@@ -104,13 +104,17 @@ a.button:hover {
     font-weight: 700;
     padding-bottom: 3rem;
 }
-
+.form-label {
+    color: var(--ajd-blue);
+    font-weight: 700;
+}
 .form-label span {
     color: var(--invalid-red);
 }
 .form-control {
     border-radius: 0;
     height: calc(2em + 0.75rem + 2px);
+    border: 2px solid var(--ajd-lightblue);
 }
 textarea.form-control {
     height: auto;

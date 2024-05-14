@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Button, Form, Alert } from 'react-bootstrap'
 
 const ContactForm = ({ formWrapper = '', formHeading }) => {
@@ -42,6 +42,13 @@ const ContactForm = ({ formWrapper = '', formHeading }) => {
       .catch((error) => alert(error));
   };
 
+  useEffect(() => {
+    if (isSubmitted) {
+      document.getElementById('thanks-msg').scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    console.log(`issubmirted is ${isSubmitted}`)
+  }, [isSubmitted]);
+
   return (
     <>
       <div className={formWrapper}>
@@ -49,18 +56,20 @@ const ContactForm = ({ formWrapper = '', formHeading }) => {
           <Row className='justify-content-md-center'>
             <Col md={9}>
 
+              <p>isSubmitted is {isSubmitted}</p>
+
               {formHeading && <h2>{formHeading}</h2>}
 
               <Form name='contact' method='POST' data-netlify='true' data-netlify-honeypot='bot-field' noValidate onSubmit={handleSubmit}>
                 <input type='hidden' name='form-name' value='contact' />
                 <Row className='mb-3'>
                   <Form.Group as={Col} md='6' controlId='formGridFirstName'>
-                    <Form.Label>First Name <span>*</span></Form.Label>
+                    <Form.Label>First name <span>*</span></Form.Label>
                     <Form.Control name='firstname' required isInvalid={errors.firstname ? true : false} />
                     <Form.Control.Feedback type='invalid'>{errors.firstname}</Form.Control.Feedback>
                   </Form.Group>
                   <Form.Group as={Col} md='6' controlId='formGridLastName'>
-                    <Form.Label>Last Name <span>*</span></Form.Label>
+                    <Form.Label>Last name <span>*</span></Form.Label>
                     <Form.Control name='lastname' required isInvalid={errors.lastname ? true : false} />
                     <Form.Control.Feedback type='invalid'>{errors.lastname}</Form.Control.Feedback>
                   </Form.Group>
@@ -88,7 +97,7 @@ const ContactForm = ({ formWrapper = '', formHeading }) => {
               </Form>
 
               {isSubmitted && (
-                <Alert variant='primary' dismissible>
+                <Alert id='thanks-msg' variant='primary' dismissible>
                   <p>Thank you. I will get back to you as soon as possible.</p>
                 </Alert>
               )}
