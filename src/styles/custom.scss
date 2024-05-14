@@ -83,7 +83,7 @@ a.button:hover {
     background-color: #fff;
     color: #000;
 }
-.ctabtns a:first-child:hover, .ctabtns a:last-child:hover, a.button:hover, .work img, .btn-primary {
+.ctabtns a:first-child:hover, .ctabtns a:last-child:hover, a.button:hover, .work img, .btn-primary, .alert-primary {
     box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
@@ -100,6 +100,11 @@ a.button:hover {
 .form-wrapper {
     background-color: #f2f2f2;
 }
+.form-wrapper h2 {
+    font-weight: 700;
+    padding-bottom: 3rem;
+}
+
 .form-label span {
     color: var(--invalid-red);
 }
@@ -120,7 +125,7 @@ textarea.form-control {
     background-image: none;
     border-color: var(--invalid-red);
 }
-.form-control:focus, .form-control.is-invalid:focus {
+.form-control:focus, .form-control.is-invalid:focus, .alert-primary .btn-close:focus {
     box-shadow: none;
 }
 
@@ -130,6 +135,17 @@ textarea.form-control {
 }
 .btn-primary:hover {
     background-color: #0077cc;
+}
+
+.alert-primary {
+    border-radius: 0;
+    border: none;
+    color: #000;
+    background-color: var(--ajd-lightblue);
+    margin-top: 3rem;
+}
+.alert-primary p {
+    margin-bottom: 0;
 }
 
 footer .logo {

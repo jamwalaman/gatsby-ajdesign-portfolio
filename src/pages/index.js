@@ -19,7 +19,7 @@ const HomePage = ({ data, location }) => {
         <Container className='content'>
           <Row className='justify-content-md-center'>
             <Col md={9}>
-              <h1 className='text-center' dangerouslySetInnerHTML={{ __html: homePage.frontmatter.welcome }} />
+              <h2 className='text-center' dangerouslySetInnerHTML={{ __html: homePage.frontmatter.welcome }} />
               <div className='ctabtns mt-5'>
                 {ctabtns.map(btn => {
                   return (
@@ -31,10 +31,10 @@ const HomePage = ({ data, location }) => {
           </Row>
         </Container>
       </div>
-      
+
       <WorkList />
 
-      <ContactForm formWrapper='form-wrapper py-5'/>
+      <ContactForm formWrapper='form-wrapper py-5' formHeading="Got a project in mind? Let's have a quick chat, no obligation" />
 
     </Layout>
   )
