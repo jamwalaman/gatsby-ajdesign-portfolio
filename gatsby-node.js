@@ -7,8 +7,9 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// Define the template for blog post
+// Define the template for blog post and portfolio post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
+const portfolioPost = path.resolve(`./src/templates/portfolio-post.js`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -16,7 +17,7 @@ const blogPost = path.resolve(`./src/templates/blog-post.js`)
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  // Get all markdown blog posts sorted by date
+  // Get all markdown blog posts and portfolio posts sorted by date
   const result = await graphql(`
     {
       allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
@@ -24,6 +25,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id
           fields {
             slug
+          }
+          frontmatter {
+            template
           }
         }
       }
@@ -40,7 +44,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const posts = result.data.allMarkdownRemark.nodes
 
-  // Create blog posts pages
+  // Create blog posts pages (and portfolio posts)
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
@@ -49,9 +53,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
+      /* If more than one page template
+
+      let pageComponent;
+      switch (node.frontmatter.template) {
+        case "blog":
+          pageComponent = blogPost;
+          break;
+        case "contactPage":
+          pageComponent = contactPageTemplate;
+          break;
+        default:
+          pageComponent = defaultPageTemplate; // Use a default template for other types of pages
+      }
+      
+      */
+
       createPage({
         path: post.fields.slug,
-        component: blogPost,
+        component: post.frontmatter.template === "portfolio" ? portfolioPost : blogPost,
         context: {
           id: post.id,
           previousPostId,

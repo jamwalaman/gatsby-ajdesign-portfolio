@@ -46,7 +46,6 @@ const ContactForm = ({ formWrapper = '', formHeading }) => {
     if (isSubmitted) {
       document.getElementById('thanks-msg').scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
-    console.log(`issubmirted is ${isSubmitted}`)
   }, [isSubmitted]);
 
   return (
@@ -55,8 +54,6 @@ const ContactForm = ({ formWrapper = '', formHeading }) => {
         <Container>
           <Row className='justify-content-md-center'>
             <Col md={9}>
-
-              <p>isSubmitted is {isSubmitted}</p>
 
               {formHeading && <h2>{formHeading}</h2>}
 
@@ -97,7 +94,7 @@ const ContactForm = ({ formWrapper = '', formHeading }) => {
               </Form>
 
               {isSubmitted && (
-                <Alert id='thanks-msg' variant='primary' dismissible>
+                <Alert id='thanks-msg' variant='primary' onClick={() => setIsSubmitted(false)} dismissible>
                   <p>Thank you. I will get back to you as soon as possible.</p>
                 </Alert>
               )}
