@@ -57,7 +57,7 @@ export const Head = ({ data: { markdownRemark: post } }) => {
 export default PortfolioPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query(
     $id: String!
     $previousPostId: String
     $nextPostId: String
@@ -76,7 +76,10 @@ export const pageQuery = graphql`
         description
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    previous: markdownRemark(
+      id: { eq: $previousPostId }
+      frontmatter: { template: { eq: "portfolio" } }
+    ) {
       fields {
         slug
       }
@@ -84,7 +87,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
+    next: markdownRemark(
+      id: { eq: $nextPostId }
+      frontmatter: { template: { eq: "portfolio" } }
+    ) {
       fields {
         slug
       }
