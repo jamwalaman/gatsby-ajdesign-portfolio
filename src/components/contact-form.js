@@ -55,7 +55,7 @@ const ContactForm = ({ formWrapper = '', formHeading }) => {
           <Row className='justify-content-md-center'>
             <Col md={9}>
 
-              {formHeading && <h2>{formHeading}</h2>}
+              {formHeading && <h2 className='pb-4'>{formHeading}</h2>}
 
               <Form name='contact' method='POST' data-netlify='true' data-netlify-honeypot='bot-field' noValidate onSubmit={handleSubmit}>
                 <input type='hidden' name='form-name' value='contact' />

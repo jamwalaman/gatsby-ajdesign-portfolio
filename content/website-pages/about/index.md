@@ -1,7 +1,7 @@
 ---
 title: About
 ---
-I have a passion for design and web development, which shows in [the work](/portfolio) I've done.
+I have a passion for design and web development, which shows in the work I've done.
 
 I have been lucky enough to work with a range of clients. I'm particularly proud of having the opportunity to work with charities and creating an online presence for them.
 
