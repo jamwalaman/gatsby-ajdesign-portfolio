@@ -90,7 +90,13 @@ a.button:hover {
 }
 
 .container.content {
-    padding-top: 9rem;
+    padding-top: 6rem;
+}
+.container.content h1 {
+    margin-bottom: 0;
+    padding: 3rem 0;
+    font-weight: 700;
+    text-transform: lowercase;
 }
 
 .work img {
