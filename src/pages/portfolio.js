@@ -11,7 +11,7 @@ const PortfolioHome = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Row className='work'>
-        <h1 className='text-center'>portfolio</h1>
+        <h1 className='text-center'>Portfolio</h1>
         {data.allMarkdownRemark.nodes.map(work => {
           return (
             <Col md={6} key={work.fields.slug} className='pb-5'>

@@ -1,6 +1,6 @@
 // custom typefaces
-import "@fontsource/inter"
-import "@fontsource/inter/700.css"
+import "@fontsource/raleway"
+import "@fontsource/raleway/700.css"
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
 
