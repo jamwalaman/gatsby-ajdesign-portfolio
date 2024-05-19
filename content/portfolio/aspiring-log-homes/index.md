@@ -3,7 +3,7 @@ title: Aspiring Log Homes
 date: 2024-05-06T12:34:00.000Z
 description: Building log homes to the highest quality, using the best quality
   trees from certified log plantations
-link: https://aspiring.ajamwaldesign.nz/
+link: https://aspiringloghomes.co.nz/
 featuredimg: web-alh03.jpg
 template: portfolio
 featured: true
