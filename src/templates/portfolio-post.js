@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PageTitle from "../components/page-title"
+import { Container, Row, Col, Image } from "react-bootstrap"
 
 const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location, }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
@@ -13,6 +14,17 @@ const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: p
       <Link to="/portfolio" className='portfolio-link'>my work </Link>
       <PageTitle title={post.frontmatter.title} />
       <a className='website-link px-4 py-2' href={post.frontmatter.link} target='_blank' rel='noreferrer' title={post.frontmatter.title}>visit website</a>
+      {post.frontmatter.webMockup.map(mck => {
+        return (
+          <div style={{backgroundColor: mck.bgColour, padding: '4rem 0'}}>
+            <Container>
+              <Row className='justify-content-md-center'>
+                <Col md={10}><Image src={mck.mockupImg.publicURL} style={{width: '100%'}} /></Col>
+              </Row>
+            </Container>
+          </div>
+        )
+      })}
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
       <nav className="blog-post-nav">
@@ -75,6 +87,12 @@ export const pageQuery = graphql`
         title
         description
         link
+        webMockup {
+          bgColour
+          mockupImg {
+            publicURL
+          }
+        }
       }
     }
     previous: markdownRemark(

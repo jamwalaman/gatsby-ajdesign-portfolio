@@ -38,6 +38,12 @@ collections:
       - { label: 'Featured image', name: 'featuredimg', widget: 'image' }
       - { label: 'Template', name: 'template', widget: 'select', options: [{label: 'Blog', value: 'blog'}, {label: 'Portfolio', value: 'portfolio'}], defualt: 'portfolio', hint: 'Select a page template' }
       - { label: 'Featured', name: 'featured', widget: 'boolean', default: false, hint: 'If on, the work will show up on the home page'}
+      - label: 'Add website mockup'
+        name: 'webMockup'
+        widget: 'list'
+        fields:
+         - { label: 'Mockup', name: 'mockupImg', widget: 'image' }
+         - { label: 'Background colour', name: 'bgColour', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - label: 'Pages'
     name: 'pages'
