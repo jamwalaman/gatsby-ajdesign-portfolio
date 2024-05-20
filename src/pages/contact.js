@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ContactForm from "../components/contact-form"
+import PageTitle from "../components/page-title"
 
 const ContactPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -11,10 +12,7 @@ const ContactPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <div className='page-title'>
-        <h1 className='text-center'>{page.frontmatter.title}</h1>
-        <div className='headline-rule'></div>
-      </div>
+      <PageTitle title={page.frontmatter.title} />
       <section className='text-center' dangerouslySetInnerHTML={{ __html: page.html }} />
       <ContactForm formWrapper='py-4' />
     </Layout>

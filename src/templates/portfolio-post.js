@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import PageTitle from "../components/page-title"
 
 const PortfolioPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -12,8 +13,8 @@ const PortfolioPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <h1>{post.frontmatter.title}</h1>
-      <a href={post.frontmatter.link} target='_blank' rel='noreferrer'>View project</a>
+      <PageTitle title={post.frontmatter.title} />
+      <a href={post.frontmatter.link} target='_blank' rel='noreferrer'>View website</a>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
       <nav className="blog-post-nav">
