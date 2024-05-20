@@ -9,6 +9,7 @@
     --ajd-blue: #0069b4;
     --ajd-lightblue: #b3d9ff;
     --invalid-red: #CC5500;
+    --blue-btn-hover: #0077cc;
 }
 
 body {
@@ -103,7 +104,8 @@ footer .nav-link:hover {
 a.button:hover,
 .work img,
 .btn-primary,
-.alert-primary {
+.alert-primary,
+.website-link {
     box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
@@ -187,7 +189,7 @@ textarea.form-control {
 }
 
 .btn-primary:hover {
-    background-color: #0077cc;
+    background-color: var(--blue-btn-hover);
 }
 
 .alert-primary {
@@ -200,6 +202,30 @@ textarea.form-control {
 
 .alert-primary p {
     margin-bottom: 0;
+}
+
+.portfolio-link,
+.website-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-link {
+    text-decoration: none;
+    color: #000;
+    margin-top: 2rem;
+}
+
+.website-link {
+    color: #fff;
+    background-color: var(--ajd-blue);
+    width: 9rem;
+    margin: 0 auto 3rem;
+}
+
+.website-link:hover {
+    background-color: var(--blue-btn-hover);
 }
 
 footer .logo {

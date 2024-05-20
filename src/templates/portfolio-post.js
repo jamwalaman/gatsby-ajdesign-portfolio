@@ -5,16 +5,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PageTitle from "../components/page-title"
 
-const PortfolioPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-}) => {
+const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location, }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Link to="/portfolio" className='portfolio-link'>my work </Link>
       <PageTitle title={post.frontmatter.title} />
-      <a href={post.frontmatter.link} target='_blank' rel='noreferrer'>View website</a>
+      <a className='website-link px-4 py-2' href={post.frontmatter.link} target='_blank' rel='noreferrer'>visit website</a>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
       <nav className="blog-post-nav">
