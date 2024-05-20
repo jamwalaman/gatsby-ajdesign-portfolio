@@ -15,7 +15,8 @@ body {
     font-family: 'Raleway', Arial, sans-serif;
 }
 
-a, .nav-link {
+a,
+.nav-link {
     color: var(--ajd-blue);
     transition: 0.2s;
 }
@@ -27,6 +28,7 @@ a.button {
     display: inline-block;
     margin-top: 1.5rem;
 }
+
 a.button:hover {
     background-color: var(--ajd-blue);
     color: #fff;
@@ -35,21 +37,28 @@ a.button:hover {
 .ajd-nav-header {
     background-color: var(--ajd-blue);
 }
+
 .logo svg {
     width: 160px;
     height: auto;
 }
+
 .ajd-nav-header .navbar-toggler {
     border: none;
 }
+
 .ajd-nav-header .navbar-toggler:focus {
     box-shadow: none;
 }
-.ajd-nav-header .nav-link, footer .nav-link {
+
+.ajd-nav-header .nav-link,
+footer .nav-link {
     color: #fff;
     font-weight: 700;
 }
-.ajd-nav-header .nav-link:hover, footer .nav-link:hover {
+
+.ajd-nav-header .nav-link:hover,
+footer .nav-link:hover {
     color: var(--ajd-lightblue);
 }
 
@@ -58,6 +67,7 @@ a.button:hover {
     background-color: var(--ajd-blue);
     color: #fff;
 }
+
 .blue-bg a {
     color: #fff;
     text-decoration: none;
@@ -67,35 +77,58 @@ a.button:hover {
     display: flex;
     justify-content: center;
 }
+
 .ctabtns a {
     border: 5px solid #fff;
 }
+
 .ctabtns a:first-child {
     background-color: #fff;
     color: #000;
     margin-right: 1rem;
 }
+
 .ctabtns a:first-child:hover {
     background-color: var(--ajd-lightblue);
     border: 5px solid var(--ajd-lightblue);
 }
+
 .ctabtns a:last-child:hover {
     background-color: #fff;
     color: #000;
 }
-.ctabtns a:first-child:hover, .ctabtns a:last-child:hover, a.button:hover, .work img, .btn-primary, .alert-primary {
-    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
+
+.ctabtns a:first-child:hover,
+.ctabtns a:last-child:hover,
+a.button:hover,
+.work img,
+.btn-primary,
+.alert-primary {
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
 }
 
-.container.content {
-    padding-top: 6rem;
+.content {
+    padding-top: 6.4rem;
 }
-.container.content h1 {
-    margin-bottom: 0;
-    padding: 3rem 0;
+
+.content h1 {
+    margin-bottom: 2rem;
     font-weight: 700;
+}
+
+.page-title {
+    padding: 3rem 0;
+}
+
+.headline-rule::before {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 0.2rem;
+    margin: auto;
+    background: var(--ajd-blue);
 }
 
 .work img {
@@ -105,35 +138,46 @@ a.button:hover {
 .form-wrapper {
     background-color: #f2f2f2;
 }
+
 .form-wrapper h2 {
     font-weight: 700;
 }
+
 .form-label {
     color: var(--ajd-blue);
     font-weight: 700;
 }
+
 .form-label span {
     color: var(--invalid-red);
 }
+
 .form-control {
     border-radius: 0;
     height: calc(2em + 0.75rem + 2px);
     border: 2px solid var(--ajd-lightblue);
 }
+
 textarea.form-control {
     height: auto;
 }
+
 .form-control:focus {
     border-color: var(--ajd-blue);
 }
+
 .invalid-feedback {
     color: var(--invalid-red);
 }
+
 .form-control.is-invalid {
     background-image: none;
     border-color: var(--invalid-red);
 }
-.form-control:focus, .form-control.is-invalid:focus, .alert-primary .btn-close:focus {
+
+.form-control:focus,
+.form-control.is-invalid:focus,
+.alert-primary .btn-close:focus {
     box-shadow: none;
 }
 
@@ -141,6 +185,7 @@ textarea.form-control {
     border-radius: 0;
     background-color: var(--ajd-blue);
 }
+
 .btn-primary:hover {
     background-color: #0077cc;
 }
@@ -152,6 +197,7 @@ textarea.form-control {
     background-color: var(--ajd-lightblue);
     margin-top: 3rem;
 }
+
 .alert-primary p {
     margin-bottom: 0;
 }
@@ -159,6 +205,7 @@ textarea.form-control {
 footer .logo {
     display: inline-block;
 }
+
 footer .bi-github {
     font-size: 2rem;
 }

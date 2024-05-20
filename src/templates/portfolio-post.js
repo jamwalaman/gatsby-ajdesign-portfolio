@@ -13,6 +13,7 @@ const PortfolioPostTemplate = ({
   return (
     <Layout location={location} title={siteTitle}>
       <h1>{post.frontmatter.title}</h1>
+      <a href={post.frontmatter.link} target='_blank' rel='noreferrer'>View project</a>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
       <nav className="blog-post-nav">
@@ -74,6 +75,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        link
       }
     }
     previous: markdownRemark(

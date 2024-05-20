@@ -34,6 +34,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Project link', name: 'link', widget: 'string' }
       - { label: 'Featured image', name: 'featuredimg', widget: 'image' }
       - { label: 'Template', name: 'template', widget: 'select', options: [{label: 'Blog', value: 'blog'}, {label: 'Portfolio', value: 'portfolio'}], defualt: 'portfolio', hint: 'Select a page template' }
       - { label: 'Featured', name: 'featured', widget: 'boolean', default: false, hint: 'If on, the work will show up on the home page'}

@@ -11,7 +11,10 @@ const AboutPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <h1 className='text-center'>{page.frontmatter.title}</h1>
+      <div className='page-title'>
+        <h1 className='text-center'>{page.frontmatter.title}</h1>
+        <div className='headline-rule'></div>
+      </div>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
       <ContactForm formWrapper='py-5' formHeading="Flick me a message and let's get the ball rolling" />
     </Layout>
