@@ -4,11 +4,10 @@ import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap'
 import SvgComponent from "./ajd-logo"
 import "bootstrap-icons/font/bootstrap-icons.css"
 
-const Layout = ({ location, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
+const Layout = ({ children }) => {
 
   return (
-    <div>
+    <>
       <Navbar expand='lg' fixed='top' className='ajd-nav-header navbar-dark'>
         <Container>
           <Link to='/' className='navbar-brand' title='Home'><SvgComponent /></Link>
@@ -22,16 +21,7 @@ const Layout = ({ location, children }) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {location.pathname === rootPath ? (
-        children
-      ) : (
-        <Container className='content'>
-          <Row className='justify-content-md-center'>
-            <Col md={10}>{children}</Col>
-          </Row>
-        </Container>
-      )}
-
+      {children}
       <footer className='blue-bg p-4' >
         <Container>
           <Row>
@@ -48,7 +38,7 @@ const Layout = ({ location, children }) => {
           </Row>
         </Container>
       </footer>
-    </div>
+    </>
   )
 
 }

@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { Container, Row, Col } from "react-bootstrap"
 import ContactForm from "../components/contact-form"
 import PageTitle from "../components/page-title"
 
@@ -12,9 +13,15 @@ const AboutPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <PageTitle title={page.frontmatter.title} />
-      <div dangerouslySetInnerHTML={{ __html: page.html }} />
-      <ContactForm formWrapper='py-5' formHeading="Flick me a message and let's get the ball rolling" />
+      <Container className='content'>
+        <Row className='justify-content-md-center'>
+          <Col md={10}>
+            <PageTitle title={page.frontmatter.title} />
+            <div dangerouslySetInnerHTML={{ __html: page.html }} />
+            <ContactForm formWrapper='py-5' formHeading="Flick me a message and let's get the ball rolling" />
+          </Col>
+        </Row>
+      </Container>
     </Layout>
   )
 }
