@@ -7,6 +7,9 @@ link: https://aspiringloghomes.co.nz/
 featuredimg: web-alh03.jpg
 template: portfolio
 featured: true
+webMockup:
+  - Mockup: web-alh03.jpg
+    bgColour: "#b3d9ff"
 ---
 Etiam ultrices scelerisque dignissim. Fusce varius dapibus tellus, in dapibus metus laoreet quis. Integer lectus sapien, semper ultricies ultrices blandit, vehicula eu justo. Vestibulum mattis purus eget purus dictum, non vehicula risus commodo. Sed iaculis a enim non porttitor. Maecenas nec pretium leo. Curabitur sit amet congue mi.
 
