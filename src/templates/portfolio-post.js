@@ -12,7 +12,7 @@ const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: p
     <Layout location={location} title={siteTitle}>
       <Link to="/portfolio" className='portfolio-link'>my work </Link>
       <PageTitle title={post.frontmatter.title} />
-      <a className='website-link px-4 py-2' href={post.frontmatter.link} target='_blank' rel='noreferrer'>visit website</a>
+      <a className='website-link px-4 py-2' href={post.frontmatter.link} target='_blank' rel='noreferrer' title={post.frontmatter.title}>visit website</a>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
       <nav className="blog-post-nav">

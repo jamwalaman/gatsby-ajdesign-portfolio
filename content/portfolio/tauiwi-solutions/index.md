@@ -4,7 +4,8 @@ date: 2024-05-04T22:37:00.000Z
 description: Tauiwi Solutions was formed in 2006 as a facilitation and workshop
   service offered by cross-cultural Tauiwi facilitators based in Otepoti
   (Dunedin)
-featuredimg: web-tauiwi.png
+link: http://www.tauiwisolutions.org.nz/
+featuredimg: web-tauiwi03.jpg
 template: portfolio
 featured: false
 ---
