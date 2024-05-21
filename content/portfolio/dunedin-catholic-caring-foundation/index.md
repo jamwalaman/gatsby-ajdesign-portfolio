@@ -7,6 +7,9 @@ link: https://cathcaringdunedin.org.nz/
 featuredimg: web-cath03.jpg
 template: portfolio
 featured: true
+webMockup:
+  - mockupImg: web-cath03.jpg
+    bgColour: "#b3d9ff"
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius mi dui, vitae tincidunt tortor cursus et. Aliquam lacinia nisi id dolor hendrerit, vel sagittis lectus interdum. Mauris feugiat vel lorem at facilisis. Praesent scelerisque purus ipsum, in mollis ex pulvinar a. Sed eros lacus, aliquet et velit at, convallis scelerisque mi. In vel diam sit amet mauris interdum malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam enim magna, pellentesque quis sem a, ornare vehicula odio. Etiam mattis consectetur iaculis. Mauris placerat mi vel consectetur lacinia. Pellentesque accumsan laoreet ex, at tempor sapien pharetra vel. Sed ornare massa non sollicitudin accumsan. Sed ipsum massa, rhoncus sed enim vitae, finibus maximus tortor. Vivamus dignissim vulputate sagittis.
 
