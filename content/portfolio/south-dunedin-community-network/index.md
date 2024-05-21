@@ -11,6 +11,8 @@ featured: true
 webMockup:
   - mockupImg: web-sdcn03.jpg
     bgColour: "#ffd9b3"
+  - mockupImg: sdcn-mockups.png
+    bgColour: "#fff"
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis pretium suscipit. Nunc lobortis sagittis mi et mattis. Vestibulum a purus diam. Sed vitae libero convallis, commodo ante vel, dictum ante. Aenean consequat, mi in tincidunt congue, justo ex volutpat magna, vel dictum sem est id sem. Aliquam pharetra interdum ligula, ac dictum ipsum scelerisque nec. Cras facilisis vulputate iaculis. Ut vel risus luctus, pulvinar quam convallis, mattis tellus. Sed quis imperdiet dui. Phasellus pretium diam in urna commodo pharetra. Donec tristique consequat lobortis. Phasellus iaculis vel mauris sed egestas. Fusce pellentesque purus vitae mi tincidunt rhoncus. In nec augue quis diam sollicitudin sollicitudin. Morbi scelerisque iaculis pellentesque.
 
