@@ -13,13 +13,18 @@ const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: p
     <Layout location={location} title={siteTitle}>
       <Link to="/portfolio" className='portfolio-link'>my work </Link>
       <PageTitle title={post.frontmatter.title} />
+      <Container>
+        <Row>
+          <Col md={{ span: 6, offset: 3 }} className='mb-3'><p className='text-center'>{post.frontmatter.description}</p></Col>
+        </Row>
+      </Container>
       <a className='website-link px-4 py-2' href={post.frontmatter.link} target='_blank' rel='noreferrer' title={post.frontmatter.title}>visit website</a>
-      {post.frontmatter.webMockup.map(mck => {
+      {post.frontmatter.webMockup.map((item, index) => {
         return (
-          <div style={{backgroundColor: mck.bgColour, padding: '4rem 0'}}>
+          <div key={index} style={{ backgroundColor: item.bgColour, padding: '4rem 0' }}>
             <Container>
               <Row className='justify-content-md-center'>
-                <Col md={10}><Image src={mck.mockupImg.publicURL} style={{width: '100%'}} /></Col>
+                <Col md={10}><Image src={item.mockupImg.publicURL} style={{ width: '100%' }} /></Col>
               </Row>
             </Container>
           </div>
