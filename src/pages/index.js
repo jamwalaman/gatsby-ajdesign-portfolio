@@ -16,7 +16,7 @@ const HomePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
 
       <div className='blue-bg pt-2 pb-5'>
-        <Container style={{ paddingTop: '9rem' }}>
+        <Container>
           <Row className='justify-content-md-center'>
             <Col md={9}>
               <h2 className='text-center' dangerouslySetInnerHTML={{ __html: homePage.frontmatter.welcome }} />
