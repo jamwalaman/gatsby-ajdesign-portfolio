@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Navbar expand='lg' fixed='top' className='ajd-nav-header navbar-dark'>
+      <Navbar expand='lg' className='ajd-nav-header navbar-dark'>
         <Container>
           <Link to='/' className='navbar-brand' title='Home'><SvgComponent /></Link>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
