@@ -12,7 +12,7 @@ webMockup:
     bgColour: "#b3d9ff"
   - mockupImg: alh-logo.png
     bgColour: "#545da9"
-  - mockupImg: alh-mockup02.png
+  - mockupImg: alh-mockup02-2.png
     bgColour: "#d4cfcf"
 ---
 Etiam ultrices scelerisque dignissim. Fusce varius dapibus tellus, in dapibus metus laoreet quis. Integer lectus sapien, semper ultricies ultrices blandit, vehicula eu justo. Vestibulum mattis purus eget purus dictum, non vehicula risus commodo. Sed iaculis a enim non porttitor. Maecenas nec pretium leo. Curabitur sit amet congue mi.
