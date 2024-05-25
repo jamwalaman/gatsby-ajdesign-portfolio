@@ -12,13 +12,10 @@ module.exports = {
     title: `Aman Jamwal Design`,
     author: {
       name: `Aman Jamwal`,
-      summary: `Designer and web developer living in Cristchurch.`,
+      summary: `Designer and web developer living in Christchurch.`,
     },
-    description: `A portfolio website showcasing my work.`,
+    description: `Aman Jamwal Design. Designer and web developer living in Christchurch.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
   },
   plugins: [
     `gatsby-plugin-decap-cms`,
