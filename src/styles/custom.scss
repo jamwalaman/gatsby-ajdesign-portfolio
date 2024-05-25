@@ -230,6 +230,20 @@ textarea.form-control {
     background-color: var(--blue-btn-hover);
 }
 
+.blue-border {
+    border-top: 0.2rem solid var(--ajd-blue);
+    margin-top: 3rem;
+}
+
+.blue-border a {
+    text-decoration: none;
+}
+
+.portfolio-nav {
+    display: flex;
+    align-items: center;
+}
+
 footer .logo {
     display: inline-block;
 }

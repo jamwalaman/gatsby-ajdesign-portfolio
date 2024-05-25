@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PageTitle from "../components/page-title"
 import { Container, Row, Col, Image } from "react-bootstrap"
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location, }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
@@ -32,13 +33,13 @@ const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: p
           </div>
         )
       })}
-      <Container>
-        <Row className='work' style={previous ? {justifyContent: 'space-between'} : {justifyContent: 'end'} }>
+      <Container className='blue-border'>
+        <Row className='work' style={previous ? { justifyContent: 'space-between' } : { justifyContent: 'end' }}>
           {previous && (
             <Col md={4} className='py-5'>
               <Link to={previous.fields.slug} rel='prev' title={previous.frontmatter.title}>
                 <Image src={previous.frontmatter.featuredimg.publicURL} className='mb-4' />
-                ← {previous.frontmatter.title}
+                <p><i style={{ marginRight: '0.8rem' }} className='bi bi-chevron-left'></i>{previous.frontmatter.title}</p>
               </Link>
             </Col>
           )}
@@ -46,7 +47,7 @@ const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: p
             <Col md={4} className='py-5'>
               <Link to={next.fields.slug} rel='next' title={next.frontmatter.title}>
                 <Image src={next.frontmatter.featuredimg.publicURL} className='mb-4' />
-                {next.frontmatter.title} →
+                <p style={{ textAlign: 'right' }}>{next.frontmatter.title}<i style={{ marginLeft: '0.8rem' }} className='bi bi-chevron-right'></i></p>
               </Link>
             </Col>
           )}
