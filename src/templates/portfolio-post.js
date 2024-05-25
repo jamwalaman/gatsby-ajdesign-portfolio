@@ -26,36 +26,32 @@ const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: p
           <div key={index} className={index === 0 ? 'work' : null} style={{ backgroundColor: item.bgColour, padding: '4rem 0' }}>
             <Container>
               <Row className='justify-content-md-center'>
-                <Col md={10}><Image src={item.mockupImg.publicURL} style={{ width: '100%' }} /></Col>
+                <Col md={10}><Image src={item.mockupImg.publicURL} /></Col>
               </Row>
             </Container>
           </div>
         )
       })}
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          padding: 0,
-        }}
-      >
-        <li>
+      <Container>
+        <Row className='work' style={previous ? {justifyContent: 'space-between'} : {justifyContent: 'end'} }>
           {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
+            <Col md={4} className='py-5'>
+              <Link to={previous.fields.slug} rel='prev' title={previous.frontmatter.title}>
+                <Image src={previous.frontmatter.featuredimg.publicURL} className='mb-4' />
+                ← {previous.frontmatter.title}
+              </Link>
+            </Col>
           )}
-        </li>
-        <li>
           {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
+            <Col md={4} className='py-5'>
+              <Link to={next.fields.slug} rel='next' title={next.frontmatter.title}>
+                <Image src={next.frontmatter.featuredimg.publicURL} className='mb-4' />
+                {next.frontmatter.title} →
+              </Link>
+            </Col>
           )}
-        </li>
-      </ul>
+        </Row>
+      </Container>
     </Layout>
   )
 }
@@ -107,6 +103,9 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        featuredimg {
+          publicURL
+        }
       }
     }
     next: markdownRemark(
@@ -118,6 +117,9 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        featuredimg {
+          publicURL
+        }
       }
     }
   }
