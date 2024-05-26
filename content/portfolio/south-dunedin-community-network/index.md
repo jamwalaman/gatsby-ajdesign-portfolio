@@ -14,3 +14,4 @@ webMockup:
   - mockupImg: sdcn-mockup01.png
     bgColour: "#f7e6e6"
 ---
+I also recreated this website with Silverstripe, which can be viewed [here](https://sdcn-demo.ajamwaldesign.nz)
