@@ -44,7 +44,7 @@ collections:
         fields:
          - { label: 'Mockup', name: 'mockupImg', widget: 'image' }
          - { label: 'Background colour', name: 'bgColour', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
   - label: 'Pages'
     name: 'pages'
     files:

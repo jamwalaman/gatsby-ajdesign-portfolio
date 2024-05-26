@@ -18,7 +18,10 @@ const PortfolioPostTemplate = ({ data: { previous, next, site, markdownRemark: p
           <Col md={10}><PageTitle title={post.frontmatter.title} /></Col>
         </Row>
         <Row>
-          <Col md={{ span: 6, offset: 3 }} className='mb-3'><p className='text-center'>{post.frontmatter.description}</p></Col>
+          <Col md={{ span: 6, offset: 3 }} className='mb-3'>
+            <p className='text-center'>{post.frontmatter.description}</p>
+            {post.html && (<div className='text-center' dangerouslySetInnerHTML={{ __html: post.html }} />)}
+          </Col>
         </Row>
       </Container>
       <a className='website-link px-4 py-2' href={post.frontmatter.link} target='_blank' rel='noreferrer' title={post.frontmatter.title}>visit website</a>
