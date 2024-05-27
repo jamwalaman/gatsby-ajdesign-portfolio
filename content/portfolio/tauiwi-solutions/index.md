@@ -11,4 +11,6 @@ featured: false
 webMockup:
   - mockupImg: web-tauiwi03.jpg
     bgColour: "#b3d9ff"
+  - mockupImg: tauiwi-mockup01.png
+    bgColour: "#f3e6e8"
 ---
