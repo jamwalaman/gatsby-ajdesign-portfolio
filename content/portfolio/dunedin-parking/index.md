@@ -1,9 +1,9 @@
 ---
 title: Dunedin Parking
-date: 2025-08-01T16:23:00.000Z
+date: 2024-05-05T18:00:00.000Z
 description: Convenient, affordable inner city parking service
 link: https://dunedinparking.co.nz
-featuredimg: ajd-dunpark-1.png
+featuredimg: ajd-duncarpark-1.png
 template: portfolio
 featured: false
 webMockup:
