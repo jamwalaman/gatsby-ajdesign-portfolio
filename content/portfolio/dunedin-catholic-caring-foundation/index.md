@@ -6,7 +6,7 @@ description: Supporting those living in the Otago and Southland region in
 link: https://cathcaringdunedin.org.nz/
 featuredimg: web-cath03.jpg
 template: portfolio
-featured: true
+featured: false
 webMockup:
   - mockupImg: web-cath03.jpg
     bgColour: "#b3d9ff"

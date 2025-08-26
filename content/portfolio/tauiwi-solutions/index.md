@@ -7,7 +7,7 @@ description: Tauiwi Solutions was formed in 2006 as a facilitation and workshop
 link: http://www.tauiwisolutions.org.nz/
 featuredimg: web-tauiwi03.jpg
 template: portfolio
-featured: false
+featured: true
 webMockup:
   - mockupImg: web-tauiwi03.jpg
     bgColour: "#b3d9ff"
